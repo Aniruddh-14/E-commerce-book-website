@@ -13,6 +13,52 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.hero {
+    background-image: url('https://images.unsplash.com/photo-1512820790803-83ca734da794');
+    /* Example book image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    /* Full screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    /* Dark overlay for readability */
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+}
+
+.cta-buttons .cta {
+    background: #ff9900;
+    color: #fff;
+    padding: 12px 25px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.cta-buttons .cta:hover {
+    background: #cc7a00;
+}
+
+
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
@@ -143,18 +189,23 @@ header {
     0% {
         transform: translateX(0);
     }
+
     20% {
         transform: translateX(-220px);
     }
+
     40% {
         transform: translateX(-440px);
     }
+
     60% {
         transform: translateX(-660px);
     }
+
     80% {
         transform: translateX(-880px);
     }
+
     100% {
         transform: translateX(0);
     }
@@ -259,4 +310,3 @@ footer .newsletter button {
 .buy-link:hover {
     background: #219150;
 }
-
